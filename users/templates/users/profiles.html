@@ -1,0 +1,12 @@
+{% extends "main.html" %}
+
+{% block content %}
+<h1>Profiles</h1>
+
+{% for profile in profiles %}
+<a href="{% url 'profile' profile.id %}">{{profile.name}}</a>
+<p>{{profile.bio|slice:'60'}}</p>
+
+
+{% endfor %}
+{% endblock content %}
